@@ -167,25 +167,5 @@ After the final answer, `evaluator.py` sends the complete transcript to GPT-4o w
 
 ---
 
-##  Deployment
-
-### Backend (Railway / Render)
-
-1. Set environment variable: `OPENAI_API_KEY`
-2. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-
-### Frontend (Vercel / Netlify)
-
-1. Set environment variable: `VITE_API_URL=https://your-backend-url.com`
-2. Build command: `npm run build`
-3. Output directory: `dist`
-
----
-
-## 📄 License
-
-MIT — free to use, modify, and showcase in your portfolio.
-
----
 
 Built by [Nicolas](https://github.com/nicogarzonhub) · Medellín, Colombia 🇨🇴
