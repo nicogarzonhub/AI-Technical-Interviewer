@@ -1,0 +1,60 @@
+.voice-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-input);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.voice-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.voice-recording {
+  border-color: var(--red) !important;
+  color: var(--red) !important;
+  background: rgba(239, 68, 68, 0.1) !important;
+  animation: pulse-border 1s ease infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+}
+
+.voice-processing {
+  border-color: var(--accent) !important;
+  background: var(--accent-glow) !important;
+}
+
+.voice-wave {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  height: 18px;
+}
+
+.voice-wave span {
+  width: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  animation: wave 0.8s ease-in-out infinite;
+}
+
+.voice-wave span:nth-child(1) { animation-delay: 0s; height: 6px; }
+.voice-wave span:nth-child(2) { animation-delay: 0.15s; height: 12px; }
+.voice-wave span:nth-child(3) { animation-delay: 0.3s; height: 10px; }
+.voice-wave span:nth-child(4) { animation-delay: 0.45s; height: 6px; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.8); }
+}
